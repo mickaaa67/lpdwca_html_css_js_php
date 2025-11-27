@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06 - Customisation Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #ff4d6d; /* Couleur personnalisée */
+      --secondary-color: #6f42c1;
+      --success-color: #28a745;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      padding: 40px 0;
+      color: #333;
+    }
+
+    .hero-section {
+      background: white;
+      border-radius: 20px;
+      padding: 60px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .component-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .component-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .btn-custom {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-custom:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+      color: white;
+    }
+
+    .custom-card {
+      border: 2px solid var(--primary-color);
+      border-radius: 20px;
+      background: linear-gradient(135deg, #fff0f2, #ffe6f0);
+    }
+
+    .custom-navbar {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    pre {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1><i class="bi bi-sliders"></i> Customisation Bootstrap</h1>
+      <p class="lead">Apprendre à personnaliser Bootstrap avec des couleurs et styles propres</p>
+      <p class="text-muted">Mini-Projet Bootstrap - LP DWCA 2025</p>
+    </div>
+
+    <!-- Couleurs personnalisées -->
+    <div class="component-card">
+      <h3>Couleurs personnalisées</h3>
+      <p>Exemple de boutons avec couleurs modifiées :</p>
+      <button class="btn btn-primary" style="background-color: var(--primary-color); border:none;">Primary Custom</button>
+      <button class="btn btn-secondary" style="background-color: var(--secondary-color); border:none;">Secondary Custom</button>
+      <button class="btn btn-success" style="background-color: var(--success-color); border:none;">Success Custom</button>
+    </div>
+
+    <!-- Cards personnalisées -->
+    <div class="component-card">
+      <h3>Cards personnalisées</h3>
+      <p>Exemple de card stylisée :</p>
+      <div class="card custom-card" style="width: 18rem;">
+        <img src="https://picsum.photos/300/200?random=5" class="card-img-top" alt="Card custom">
+        <div class="card-body">
+          <h5 class="card-title">Card Custom</h5>
+          <p class="card-text">Cette card utilise un gradient et une bordure personnalisée.</p>
+          <a href="#" class="btn btn-custom">Action</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar personnalisée -->
+    <div class="component-card">
+      <h3>Navbar personnalisée</h3>
+      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar mb-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MonSite</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCustom">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCustom">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">À propos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Exemple Carousel personnalisé -->
+    <div class="component-card">
+      <h3>Carousel personnalisé</h3>
+      <div id="carouselCustom" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/800/300?random=6" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Slide 1</h5>
+              <p>Exemple de texte personnalisé sur le carousel.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/800/300?random=7" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Slide 2</h5>
+              <p>Texte et styles modifiés.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/800/300?random=8" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Slide 3</h5>
+              <p>Utilisation de couleurs et overlays personnalisés.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCustom" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCustom" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Suivant</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Chapitres -->
+    <div class="text-center mt-4">
+      <a href="05-modals.html" class="btn btn-custom"><i class="bi bi-arrow-left-circle"></i> Chapitre Précédent</a>
+      <a href="../index.html" class="btn btn-custom"><i class="bi bi-arrow-right-circle"></i>Retour a l'accueil</a>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

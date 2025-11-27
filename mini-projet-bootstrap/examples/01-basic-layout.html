@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 - Basic Layout Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --primary-color: #0d6efd;
+      --secondary-color: #6610f2;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      padding: 40px 0;
+      color: #333;
+    }
+    .hero-section {
+      background: white;
+      border-radius: 20px;
+      padding: 60px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .hero-section h1 {
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .layout-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .layout-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+    .btn-custom {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-custom:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1><i class="bi bi-layout-text-sidebar-reverse"></i> Basic Layout</h1>
+      <p class="lead">Comprendre le système de base des grilles et containers Bootstrap</p>
+      <p class="text-muted">Mini-Projet Bootstrap - LP DWCA 2025</p>
+    </div>
+
+    <!-- Introduction Layout -->
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="layout-card">
+          <h3>Container et Grid</h3>
+          <p>Bootstrap utilise des containers pour centraliser le contenu et des grilles pour organiser les colonnes.</p>
+          <ul>
+            <li>.container : largeur fixe responsive</li>
+            <li>.container-fluid : largeur pleine largeur</li>
+            <li>.row : ligne de colonnes</li>
+            <li>.col-* : colonnes responsives</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="layout-card">
+          <h3>Exemple Basique</h3>
+          <p>Voici un layout simple avec 2 colonnes :</p>
+          <div class="container border p-3">
+            <div class="row">
+              <div class="col bg-primary text-white p-3">Colonne 1</div>
+              <div class="col bg-success text-white p-3">Colonne 2</div>
+            </div>
+          </div>
+          <p class="mt-2 text-muted">Les colonnes s’adaptent automatiquement selon la taille de l’écran.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Objectifs pédagogiques -->
+    <div class="layout-card">
+      <h3><i class="bi bi-gear-fill"></i> Objectifs</h3>
+      <ul>
+        <li>Comprendre l’utilisation des containers et grilles</li>
+        <li>Créer des layouts responsives facilement</li>
+        <li>Appliquer des colonnes, lignes et espacements corrects</li>
+        <li>Préparer la structure pour les composants futurs</li>
+      </ul>
+    </div>
+
+    <!-- Bouton navigation -->
+    <div class="text-center mt-4">
+      <a href="../index.html" class="btn btn-custom"><i class="bi bi-arrow-left-circle"></i> Retour a l'accueil</a>
+      <a href="02-navigation.html" class="btn btn-custom"><i class="bi bi-arrow-right-circle"></i> Chapitre Suivant</a> 
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
