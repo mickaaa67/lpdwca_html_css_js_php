@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 - Grid System Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --primary-color: #0d6efd;
+      --secondary-color: #6610f2;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      padding: 40px 0;
+      color: #333;
+    }
+
+    .hero-section {
+      background: white;
+      border-radius: 20px;
+      padding: 60px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .grid-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .grid-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .btn-custom {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-custom:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+      color: white;
+    }
+
+    pre {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1><i class="bi bi-columns-gap"></i> Système de Grille (Grid System)</h1>
+      <p class="lead">Maîtrisez la structure responsive avec Bootstrap</p>
+      <p class="text-muted">Mini-Projet Bootstrap - LP DWCA 2025</p>
+    </div>
+
+    <!-- Introduction Grid -->
+    <div class="grid-card">
+      <h3>Grille de Base</h3>
+      <p>Bootstrap utilise une grille de <strong>12 colonnes</strong> pour créer des layouts flexibles et responsives.</p>
+      <pre><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-4 bg-primary text-white"&gt;Col 1&lt;/div&gt;
+    &lt;div class="col-4 bg-success text-white"&gt;Col 2&lt;/div&gt;
+    &lt;div class="col-4 bg-danger text-white"&gt;Col 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <!-- Responsive Example -->
+    <div class="grid-card">
+      <h3>Exemple Responsive</h3>
+      <p>Les colonnes s'adaptent selon la taille de l'écran :</p>
+      <div class="container text-center mt-4">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-3 bg-primary text-white p-3 mb-3">Bloc 1</div>
+          <div class="col-sm-12 col-md-6 col-lg-3 bg-success text-white p-3 mb-3">Bloc 2</div>
+          <div class="col-sm-12 col-md-6 col-lg-3 bg-warning text-dark p-3 mb-3">Bloc 3</div>
+          <div class="col-sm-12 col-md-6 col-lg-3 bg-danger text-white p-3 mb-3">Bloc 4</div>
+        </div>
+      </div>
+      <p class="text-muted mt-2">✅ Mobile : 4 lignes empilées | ✅ Tablette : 2 colonnes par ligne | ✅ PC : 4 colonnes côte à côte</p>
+    </div>
+
+    <!-- Nested Grid -->
+    <div class="grid-card">
+      <h3>Grille Imbriquée</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-8 bg-light border p-2">
+            <div class="row">
+              <div class="col-6 bg-info p-2 text-white">Sous-col 1</div>
+              <div class="col-6 bg-secondary p-2 text-white">Sous-col 2</div>
+            </div>
+          </div>
+          <div class="col-4 bg-warning p-2">Colonne latérale</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout Example -->
+    <div class="grid-card">
+      <h3>Mise en Page Basique</h3>
+      <div class="container mt-3">
+        <header class="row bg-dark text-white p-3 mb-2">
+          <div class="col">En-tête</div>
+        </header>
+        <main class="row">
+          <aside class="col-md-3 bg-light p-3">Menu</aside>
+          <section class="col-md-9 p-3 bg-white">Contenu principal</section>
+        </main>
+        <footer class="row bg-secondary text-white p-3 mt-2">
+          <div class="col">Pied de page</div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Navigation Chapitres -->
+    <div class="text-center mt-4">
+      <a href="02-navigation.html" class="btn btn-custom"><i class="bi bi-arrow-left-circle"></i> Chapitre Précédent</a>
+      <a href="04-cards.html" class="btn btn-custom"><i class="bi bi-arrow-right-circle"></i> Chapitre Suivant</a>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
